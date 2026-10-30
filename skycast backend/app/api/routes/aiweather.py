@@ -108,3 +108,8 @@ async def ask_weather_ai_legacy(
     request: WeatherQuestionRequest,
     city: str = Query(..., description="City name to get weather for, e.g. London"),
     current_user: User = Depends(get_current_user),
+) -> WeatherQuestionResponse:
+    """
+    Legacy endpoint: Ask Weather AI a question (kept for backward compatibility).
+    Use POST /ai-weather instead with city and question in request body.
+    """
