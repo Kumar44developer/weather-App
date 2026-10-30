@@ -89,3 +89,8 @@ async def ask_weather_ai(
     Input:
     - city: City name to get weather for
     - question: User's question about the weather
+
+    
+    Output:
+    - advice: AI-generated advice based on weather data and question
+    """
