@@ -25,3 +25,9 @@ async def fetch_weather_data(city: str) -> dict:
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="OpenWeather API key is not configured on the server",
         )
+
+    params = {
+        "q": city,
+        "appid": settings.openweather_api_key,
+        "units": settings.openweather_default_units,
+    }
