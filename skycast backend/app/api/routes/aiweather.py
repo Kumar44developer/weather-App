@@ -101,3 +101,10 @@ async def ask_weather_ai(
     ai_advice = await get_weather_advice(weather_data, request.question)
     
     return WeatherAIResponse(advice=ai_advice)
+
+
+@router.post("/ask", response_model=WeatherQuestionResponse)
+async def ask_weather_ai_legacy(
+    request: WeatherQuestionRequest,
+    city: str = Query(..., description="City name to get weather for, e.g. London"),
+    current_user: User = Depends(get_current_user),
