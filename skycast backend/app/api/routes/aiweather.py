@@ -14,3 +14,9 @@ from app.schemas.ai_weather import (
 )
 
 router = APIRouter(prefix="/ai-weather", tags=["ai-weather"], dependencies=[Depends(get_current_user)])
+
+async def fetch_weather_data(city: str) -> dict:
+    """
+    Fetch weather data from OpenWeather API.
+    Returns a dictionary with weather information.
+    """
