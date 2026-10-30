@@ -113,3 +113,8 @@ async def ask_weather_ai_legacy(
     Legacy endpoint: Ask Weather AI a question (kept for backward compatibility).
     Use POST /ai-weather instead with city and question in request body.
     """
+    # Fetch weather data for the city
+    weather_data = await fetch_weather_data(city)
+    
+    # Get AI advice based on weather data and user question
+    ai_response = await get_weather_advice(weather_data, request.question)
