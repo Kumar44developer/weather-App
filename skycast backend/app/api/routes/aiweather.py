@@ -94,3 +94,10 @@ async def ask_weather_ai(
     Output:
     - advice: AI-generated advice based on weather data and question
     """
+    # Fetch weather data for the city
+    weather_data = await fetch_weather_data(request.city)
+    
+    # Get AI advice based on weather data and user question
+    ai_advice = await get_weather_advice(weather_data, request.question)
+    
+    return WeatherAIResponse(advice=ai_advice)
