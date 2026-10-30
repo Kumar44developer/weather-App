@@ -84,3 +84,8 @@ async def ask_weather_ai(
     current_user: User = Depends(get_current_user),
 ) -> WeatherAIResponse:
     """
+    Ask Weather AI a question based on current weather conditions (protected route).
+    
+    Input:
+    - city: City name to get weather for
+    - question: User's question about the weather
