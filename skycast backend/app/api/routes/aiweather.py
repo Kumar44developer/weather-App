@@ -77,3 +77,10 @@ async def fetch_weather_data(city: str) -> dict:
         "wind": wind,
         "description": description,
     }
+
+@router.post("", response_model=WeatherAIResponse)
+async def ask_weather_ai(
+    request: WeatherAIRequest,
+    current_user: User = Depends(get_current_user),
+) -> WeatherAIResponse:
+    """
