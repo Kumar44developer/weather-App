@@ -54,3 +54,13 @@ async def fetch_weather_data(city: str) -> dict:
             status_code=status.HTTP_502_BAD_GATEWAY,
             detail=f"OpenWeather API error: {message}",
         )
+
+    data = resp.json()
+
+    # Extract required fields
+    try:
+        temperature = float(data["main"]["temp"])
+        humidity = int(data["main"]["humidity"])
+        wind = float(data["wind"]["speed"])
+        description = str(data["weather"][0]["description"])
+        city_name = str(data.get("name") or city)
