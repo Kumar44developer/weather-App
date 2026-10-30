@@ -118,3 +118,9 @@ async def ask_weather_ai_legacy(
     
     # Get AI advice based on weather data and user question
     ai_response = await get_weather_advice(weather_data, request.question)
+
+    return WeatherQuestionResponse(
+        question=request.question,
+        user_id=current_user.id,
+        response=ai_response,
+    )
