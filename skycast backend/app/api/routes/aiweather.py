@@ -48,3 +48,9 @@ async def fetch_weather_data(city: str) -> dict:
             message = data.get("message", "Failed to fetch weather data")
         except Exception:
             message = "Failed to fetch weather data"
+
+
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail=f"OpenWeather API error: {message}",
+        )
