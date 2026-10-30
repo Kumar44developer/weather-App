@@ -31,3 +31,8 @@ async def fetch_weather_data(city: str) -> dict:
         "appid": settings.openweather_api_key,
         "units": settings.openweather_default_units,
     }
+
+
+    try:
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            resp = await client.get(settings.openweather_base_url, params=params)
