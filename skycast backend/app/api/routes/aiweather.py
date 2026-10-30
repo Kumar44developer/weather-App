@@ -12,3 +12,5 @@ from app.schemas.ai_weather import (
     WeatherQuestionRequest,
     WeatherQuestionResponse,
 )
+
+router = APIRouter(prefix="/ai-weather", tags=["ai-weather"], dependencies=[Depends(get_current_user)])
