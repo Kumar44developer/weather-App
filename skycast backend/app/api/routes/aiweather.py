@@ -20,3 +20,8 @@ async def fetch_weather_data(city: str) -> dict:
     Fetch weather data from OpenWeather API.
     Returns a dictionary with weather information.
     """
+    if not settings.openweather_api_key:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="OpenWeather API key is not configured on the server",
+        )
