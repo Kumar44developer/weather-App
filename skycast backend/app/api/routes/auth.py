@@ -55,3 +55,10 @@ async def login(credentials: UserLogin, db: Session = Depends(get_db)):
     access_token = create_access_token(data={"sub": user.id})
     
     return Token(access_token=access_token, token_type="bearer")
+
+@router.get("/me", response_model=UserResponse)
+async def get_current_user_info(current_user: User = Depends(get_current_user)):
+    """
+    Get current authenticated user information.
+    """
+    return UserResponse(id=current_user.id, name=current_user.name, email=current_user.email)
