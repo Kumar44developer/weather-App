@@ -29,3 +29,10 @@ async def register(user_data: UserRegister, db: Session = Depends(get_db)):
         email=user_data.email,
         password_hash=hashed_password,
     )
+
+    
+    db.add(new_user)
+    db.commit()
+    db.refresh(new_user)
+    
+    return UserResponse(id=new_user.id, name=new_user.name, email=new_user.email)
