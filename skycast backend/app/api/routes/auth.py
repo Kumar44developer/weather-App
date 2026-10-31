@@ -42,3 +42,12 @@ async def login(credentials: UserLogin, db: Session = Depends(get_db)):
     """
     Login and get JWT access token.
     """
+
+    user = db.query(User).filter(User.email == credentials.email).first()
+    
+    if not user or not verify_password(credentials.password, user.password_hash):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect email or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
