@@ -51,3 +51,7 @@ async def login(credentials: UserLogin, db: Session = Depends(get_db)):
             detail="Incorrect email or password",
             headers={"WWW-Authenticate": "Bearer"},
         )
+
+    access_token = create_access_token(data={"sub": user.id})
+    
+    return Token(access_token=access_token, token_type="bearer")
