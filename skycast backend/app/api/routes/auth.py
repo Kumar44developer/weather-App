@@ -36,3 +36,9 @@ async def register(user_data: UserRegister, db: Session = Depends(get_db)):
     db.refresh(new_user)
     
     return UserResponse(id=new_user.id, name=new_user.name, email=new_user.email)
+
+@router.post("/login", response_model=Token)
+async def login(credentials: UserLogin, db: Session = Depends(get_db)):
+    """
+    Login and get JWT access token.
+    """
