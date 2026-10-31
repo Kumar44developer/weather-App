@@ -13,3 +13,9 @@ router = APIRouter(prefix="/weather", tags=["weather"], dependencies=[Depends(ge
 @router.get("/health", summary="Health check for weather API")
 async def health_check(current_user: User = Depends(get_current_user)) -> dict:
   return {"status": "ok", "service": "weather", "user_id": current_user.id}
+
+@router.get(
+  "",
+  response_model=CurrentWeatherResponse,
+  summary="Get current weather for a city from OpenWeather",
+)
