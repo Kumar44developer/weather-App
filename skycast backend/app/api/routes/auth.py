@@ -23,3 +23,9 @@ async def register(user_data: UserRegister, db: Session = Depends(get_db)):
             detail="Email already registered",
         )
     
+    hashed_password = get_password_hash(user_data.password)
+    new_user = User(
+        name=user_data.name,
+        email=user_data.email,
+        password_hash=hashed_password,
+    )
