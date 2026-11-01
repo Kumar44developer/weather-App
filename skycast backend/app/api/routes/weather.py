@@ -70,3 +70,8 @@ async def get_current_weather(
     wind = float(data["wind"]["speed"])
     description = str(data["weather"][0]["description"])
     city_name = str(data.get("name") or city)
+  except (KeyError, IndexError, TypeError, ValueError) as exc:
+    raise HTTPException(
+      status_code=status.HTTP_502_BAD_GATEWAY,
+      detail=f"Unexpected response structure from OpenWeather: {exc}",
+    ) from exc
