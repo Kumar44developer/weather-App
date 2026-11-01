@@ -23,3 +23,11 @@ async def get_current_weather(
   city: str = Query(..., description="City name, e.g. London"),
   current_user: User = Depends(get_current_user),
 ) -> CurrentWeatherResponse:
+  """
+  Fetch current weather for a city from OpenWeather API.
+  """
+  if not settings.openweather_api_key:
+    raise HTTPException(
+      status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+      detail="OpenWeather API key is not configured on the server",
+    )
