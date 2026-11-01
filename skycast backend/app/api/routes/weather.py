@@ -75,3 +75,11 @@ async def get_current_weather(
       status_code=status.HTTP_502_BAD_GATEWAY,
       detail=f"Unexpected response structure from OpenWeather: {exc}",
     ) from exc
+
+  return CurrentWeatherResponse(
+    city=city_name,
+    temperature=temperature,
+    humidity=humidity,
+    wind=wind,
+    description=description,
+  )
