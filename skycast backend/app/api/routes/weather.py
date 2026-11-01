@@ -19,3 +19,7 @@ async def health_check(current_user: User = Depends(get_current_user)) -> dict:
   response_model=CurrentWeatherResponse,
   summary="Get current weather for a city from OpenWeather",
 )
+async def get_current_weather(
+  city: str = Query(..., description="City name, e.g. London"),
+  current_user: User = Depends(get_current_user),
+) -> CurrentWeatherResponse:
