@@ -13,3 +13,9 @@ async def get_current_user(
     credentials: HTTPAuthorizationCredentials = Depends(security),
     db: Session = Depends(get_db),
 ) -> User:
+    """
+    Dependency to get the current authenticated user from JWT token.
+    """
+    token = credentials.credentials
+    payload = decode_access_token(token)
+    
