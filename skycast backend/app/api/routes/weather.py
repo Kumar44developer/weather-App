@@ -46,3 +46,11 @@ async def get_current_weather(
       status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
       detail=f"Error communicating with OpenWeather API: {exc}",
     ) from exc
+
+  if resp.status_code != 200:
+    # Pass through error from OpenWeather when possible
+    try:
+      data = resp.json()
+      message = data.get("message", "Failed to fetch weather data")
+    except Exception:
+      message = "Failed to fetch weather data"
