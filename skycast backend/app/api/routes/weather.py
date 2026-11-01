@@ -36,3 +36,13 @@ async def get_current_weather(
     "appid": settings.openweather_api_key,
     "units": settings.openweather_default_units,
   }
+
+
+  try:
+    async with httpx.AsyncClient(timeout=10.0) as client:
+      resp = await client.get(settings.openweather_base_url, params=params)
+  except httpx.RequestError as exc:
+    raise HTTPException(
+      status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+      detail=f"Error communicating with OpenWeather API: {exc}",
+    ) from exc
