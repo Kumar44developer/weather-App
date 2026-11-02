@@ -36,3 +36,9 @@ database_url: str = os.getenv("DATABASE_URL", "sqlite:///./skycast.db")
   # OpenAI / LLM configuration
   openai_api_key: str | None = os.getenv("OPENAI_API_KEY")
   openai_model: str = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+
+  # Comma-separated list of origins, e.g. "http://localhost:5173,https://myapp.com"
+  backend_cors_origins: List[AnyHttpUrl] | List[str] = os.getenv(
+    "BACKEND_CORS_ORIGINS",
+    "http://localhost:5173",
+  ).split(",")
