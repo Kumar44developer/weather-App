@@ -57,3 +57,5 @@ def get_settings() -> Settings:
   Cached settings instance so env is read only once.
   """
   return Settings()
+
+settings = get_settings()
