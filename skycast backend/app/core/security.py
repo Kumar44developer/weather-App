@@ -23,3 +23,7 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -
     Create a JWT access token.
     """
     to_encode = data.copy()
+    if expires_delta:
+        expire = datetime.utcnow() + expires_delta
+    else:
+        expire = datetime.utcnow() + timedelta(minutes=settings.jwt_access_token_expire_minutes)
