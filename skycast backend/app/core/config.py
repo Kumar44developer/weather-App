@@ -50,3 +50,10 @@ database_url: str = os.getenv("DATABASE_URL", "sqlite:///./skycast.db")
       # Split by comma and strip whitespace
       return [origin.strip() for origin in v.split(",") if origin.strip()]
     return v
+
+@lru_cache
+def get_settings() -> Settings:
+  """
+  Cached settings instance so env is read only once.
+  """
+  return Settings()
