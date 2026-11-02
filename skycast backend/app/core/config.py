@@ -42,3 +42,11 @@ database_url: str = os.getenv("DATABASE_URL", "sqlite:///./skycast.db")
     "BACKEND_CORS_ORIGINS",
     "http://localhost:5173",
   ).split(",")
+
+  @field_validator("backend_cors_origins", mode="before")
+  @classmethod
+  def assemble_cors_origins(cls, v: str | List[str]) -> List[str]:
+    if isinstance(v, str):
+      # Split by comma and strip whitespace
+      return [origin.strip() for origin in v.split(",") if origin.strip()]
+    return v
