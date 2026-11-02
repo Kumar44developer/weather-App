@@ -16,3 +16,10 @@ def get_password_hash(password: str) -> str:
     Hash a password using bcrypt.
     """
     return pwd_context.hash(password)
+
+
+def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
+    """
+    Create a JWT access token.
+    """
+    to_encode = data.copy()
