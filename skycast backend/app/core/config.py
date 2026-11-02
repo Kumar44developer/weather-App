@@ -32,3 +32,7 @@ database_url: str = os.getenv("DATABASE_URL", "sqlite:///./skycast.db")
     "https://api.openweathermap.org/data/2.5/weather",
   )
   openweather_default_units: str = os.getenv("OPENWEATHER_UNITS", "metric")
+
+  # OpenAI / LLM configuration
+  openai_api_key: str | None = os.getenv("OPENAI_API_KEY")
+  openai_model: str = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
