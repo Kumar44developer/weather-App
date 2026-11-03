@@ -37,3 +37,7 @@ async def ask_llm(prompt: str, system_prompt: Optional[str] = None) -> str:
   content = completion.choices[0].message.content or ""
   return content
 
+async def get_weather_advice(
+    weather_data: dict,
+    user_question: str,
+) -> str:
