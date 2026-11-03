@@ -22,3 +22,9 @@ async def ask_llm(prompt: str, system_prompt: Optional[str] = None) -> str:
   Simple helper to ask the configured LLM a question and get a text response.
   Uses the model defined in settings.openai_model.
   """
+  client = get_openai_client()
+
+  messages = []
+  if system_prompt:
+    messages.append({"role": "system", "content": system_prompt})
+  messages.append({"role": "user", "content": prompt})
