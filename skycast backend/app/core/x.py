@@ -56,3 +56,7 @@ async def get_weather_advice(
   Returns:
     AI-generated advice as a string
   """
+
+  system_prompt = """You are a helpful weather assistant. You provide practical, 
+  friendly advice based on current weather conditions. Be concise, informative, 
+  and considerate of the user's question. Focus on actionable recommendations."""
