@@ -71,3 +71,5 @@ async def get_weather_advice(
 User Question: {user_question}
 
 Please provide helpful advice based on these weather conditions and answer the user's question."""
+
+  return await ask_llm(weather_context, system_prompt=system_prompt)
