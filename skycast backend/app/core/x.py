@@ -60,3 +60,7 @@ async def get_weather_advice(
   system_prompt = """You are a helpful weather assistant. You provide practical, 
   friendly advice based on current weather conditions. Be concise, informative, 
   and considerate of the user's question. Focus on actionable recommendations."""
+
+  weather_context = f"""Current Weather Conditions:
+- City: {weather_data.get('city', 'Unknown')}
+- Temperature: {weather_data.get('temperature', 'N/A')}°C
