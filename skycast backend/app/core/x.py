@@ -14,3 +14,5 @@ def get_openai_client() -> OpenAI:
       status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
       detail="OpenAI API key is not configured on the server",
     )
+
+  return OpenAI(api_key=settings.openai_api_key)
