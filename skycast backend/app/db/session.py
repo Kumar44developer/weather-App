@@ -14,3 +14,9 @@ def get_db():
   """
   FastAPI dependency that provides a DB session and ensures it is closed.
   """
+  db = SessionLocal()
+  try:
+    yield db
+  finally:
+    db.close()
+
