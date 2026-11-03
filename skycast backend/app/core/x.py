@@ -33,3 +33,7 @@ async def ask_llm(prompt: str, system_prompt: Optional[str] = None) -> str:
     model=settings.openai_model,
     messages=messages,
   )
+
+  content = completion.choices[0].message.content or ""
+  return content
+
