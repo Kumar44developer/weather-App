@@ -28,3 +28,8 @@ async def ask_llm(prompt: str, system_prompt: Optional[str] = None) -> str:
   if system_prompt:
     messages.append({"role": "system", "content": system_prompt})
   messages.append({"role": "user", "content": prompt})
+
+  completion = client.chat.completions.create(
+    model=settings.openai_model,
+    messages=messages,
+  )
