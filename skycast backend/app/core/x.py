@@ -41,3 +41,5 @@ async def get_weather_advice(
     weather_data: dict,
     user_question: str,
 ) -> str:
+  """
+  Get AI advice based on weather data and user question.
