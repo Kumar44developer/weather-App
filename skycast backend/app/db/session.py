@@ -9,3 +9,8 @@ engine = create_engine(
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+def get_db():
+  """
+  FastAPI dependency that provides a DB session and ensures it is closed.
+  """
