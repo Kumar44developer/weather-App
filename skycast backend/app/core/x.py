@@ -43,3 +43,9 @@ async def get_weather_advice(
 ) -> str:
   """
   Get AI advice based on weather data and user question.
+
+  Args:
+    weather_data: Dictionary containing weather information with keys:
+      - city: str
+      - temperature: float (in Celsius)
+      - humidity: int (percentage)
