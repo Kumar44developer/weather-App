@@ -64,3 +64,6 @@ async def get_weather_advice(
   weather_context = f"""Current Weather Conditions:
 - City: {weather_data.get('city', 'Unknown')}
 - Temperature: {weather_data.get('temperature', 'N/A')}°C
+- Humidity: {weather_data.get('humidity', 'N/A')}%
+- Wind Speed: {weather_data.get('wind', 'N/A')} km/h
+- Conditions: {weather_data.get('description', 'N/A')}
