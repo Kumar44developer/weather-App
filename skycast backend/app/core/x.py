@@ -49,3 +49,6 @@ async def get_weather_advice(
       - city: str
       - temperature: float (in Celsius)
       - humidity: int (percentage)
+      - wind: float (wind speed in km/h)
+      - description: str (weather description)
+    user_question: The user's question about the weather
