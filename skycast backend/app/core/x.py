@@ -67,3 +67,7 @@ async def get_weather_advice(
 - Humidity: {weather_data.get('humidity', 'N/A')}%
 - Wind Speed: {weather_data.get('wind', 'N/A')} km/h
 - Conditions: {weather_data.get('description', 'N/A')}
+
+User Question: {user_question}
+
+Please provide helpful advice based on these weather conditions and answer the user's question."""
