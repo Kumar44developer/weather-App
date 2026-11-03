@@ -16,3 +16,9 @@ def get_openai_client() -> OpenAI:
     )
 
   return OpenAI(api_key=settings.openai_api_key)
+
+async def ask_llm(prompt: str, system_prompt: Optional[str] = None) -> str:
+  """
+  Simple helper to ask the configured LLM a question and get a text response.
+  Uses the model defined in settings.openai_model.
+  """
