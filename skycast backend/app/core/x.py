@@ -52,3 +52,7 @@ async def get_weather_advice(
       - wind: float (wind speed in km/h)
       - description: str (weather description)
     user_question: The user's question about the weather
+
+  Returns:
+    AI-generated advice as a string
+  """
