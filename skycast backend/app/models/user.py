@@ -8,3 +8,5 @@ class User(Base):
   """
   User table.
   """
+
+  __tablename__ = "users"
