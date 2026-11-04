@@ -20,3 +20,10 @@ class WeatherQuestionResponse(BaseModel):
     question: str
     user_id: int
     response: str
+
+
+class WeatherAIResponse(BaseModel):
+    """
+    Schema for Weather AI response with just the advice.
+    """
+    advice: str
