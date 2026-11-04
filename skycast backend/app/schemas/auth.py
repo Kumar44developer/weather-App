@@ -24,3 +24,12 @@ class Token(BaseModel):
     """
     access_token: str
     token_type: str = "bearer"
+
+
+class UserResponse(BaseModel):
+    """
+    Schema for user response (without password).
+    """
+    id: int
+    name: str
+    email: str
