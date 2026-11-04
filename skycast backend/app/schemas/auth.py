@@ -8,3 +8,12 @@ class UserRegister(BaseModel):
     name: str
     email: EmailStr
     password: str
+
+
+
+class UserLogin(BaseModel):
+    """
+    Schema for user login.
+    """
+    email: EmailStr
+    password: str
