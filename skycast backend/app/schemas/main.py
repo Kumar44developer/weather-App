@@ -31,3 +31,7 @@ def create_app() -> FastAPI:
   @app.get("/", tags=["health"])
   async def root() -> dict:
     return {
+      "app": settings.app_name,
+      "environment": settings.environment,
+      "message": "SkyCast backend is running",
+    }
