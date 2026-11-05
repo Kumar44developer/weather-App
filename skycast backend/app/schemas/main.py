@@ -35,3 +35,8 @@ def create_app() -> FastAPI:
       "environment": settings.environment,
       "message": "SkyCast backend is running",
     }
+
+  return app
+
+
+app = create_app()
