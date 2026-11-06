@@ -50,3 +50,10 @@ export default function ToastContainer() {
             className="flex-shrink-0 text-white hover:text-gray-200 active:scale-90 font-bold text-lg sm:text-xl leading-none transition-transform duration-200"
             aria-label="Close"
           >
+            ×
+          </button>
+        </div>
+      ))}
+    </div>
+  )
+}
