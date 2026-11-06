@@ -49,3 +49,8 @@ export default function WeatherCard({
     }
     return '🌤️'
   }
+
+  return (
+    <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-4 sm:p-6 hover:shadow-2xl hover:scale-[1.02] hover:bg-white/90 transition-all duration-300 ease-out animate-fade-in">
+      <div className="flex items-start justify-between mb-3 sm:mb-4">
+        <div className="flex-1 min-w-0">
