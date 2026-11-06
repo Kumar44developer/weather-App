@@ -39,3 +39,6 @@ export default function BackgroundVideo() {
 
     return () => clearTimeout(timer)
   }, [weatherType])
+
+  const handleVideoError = () => {
+    if (!weatherType) return
