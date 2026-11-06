@@ -21,3 +21,7 @@ export default function ToastContainer() {
     switch (type) {
       case 'success':
         return '✓'
+      case 'error':
+        return '✕'
+      case 'warning':
+        return '⚠'
