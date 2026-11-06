@@ -16,3 +16,8 @@ export default function ToastContainer() {
         return 'bg-blue-500 text-white'
     }
   }
+
+  const getIcon = (type: string) => {
+    switch (type) {
+      case 'success':
+        return '✓'
