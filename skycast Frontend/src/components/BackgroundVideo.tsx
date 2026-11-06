@@ -51,3 +51,8 @@ export default function BackgroundVideo() {
       setCurrentVideo(fallbackSrc)
     }
   }
+
+
+  if (!currentVideo) {
+    return null
+  }
