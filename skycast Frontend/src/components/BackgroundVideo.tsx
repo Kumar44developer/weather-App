@@ -25,3 +25,6 @@ export default function BackgroundVideo() {
       setCurrentVideo(null)
       return
     }
+
+    setFade(true)
+
