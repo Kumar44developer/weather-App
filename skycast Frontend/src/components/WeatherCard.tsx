@@ -5,3 +5,8 @@ interface WeatherCardProps {
   city: string
   temperature: number
   weather: string
+  icon?: string
+  humidity: number
+  wind: number
+  isPrimary?: boolean // If true, this card's weather will control the background
+}
