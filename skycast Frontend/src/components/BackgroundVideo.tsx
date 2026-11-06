@@ -28,3 +28,10 @@ export default function BackgroundVideo() {
 
     setFade(true)
 
+    const timer = setTimeout(() => {
+      // Try local video first, fallback to placeholder
+      // You can modify this logic to prefer one source over another
+      const videoSrc = videoSources[weatherType] || fallbackVideos[weatherType]
+      setCurrentVideo(videoSrc)
+      setFade(false)
+    }, 300)
