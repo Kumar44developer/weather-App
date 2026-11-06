@@ -19,3 +19,6 @@ export default function WeatherCard({
   icon,
   humidity,
   wind,
+  isPrimary = false,
+}: WeatherCardProps) {
+  const { setWeatherType, getWeatherTypeFromString } = useWeather()
