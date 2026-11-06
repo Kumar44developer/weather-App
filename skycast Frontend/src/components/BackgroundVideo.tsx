@@ -35,3 +35,7 @@ export default function BackgroundVideo() {
       setCurrentVideo(videoSrc)
       setFade(false)
     }, 300)
+
+
+    return () => clearTimeout(timer)
+  }, [weatherType])
