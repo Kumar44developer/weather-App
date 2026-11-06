@@ -56,3 +56,8 @@ export default function BackgroundVideo() {
   if (!currentVideo) {
     return null
   }
+
+  return (
+    <div className="fixed inset-0 z-0 overflow-hidden">
+      <video
+        key={currentVideo}
