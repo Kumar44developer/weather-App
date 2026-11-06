@@ -25,3 +25,8 @@ export default function ToastContainer() {
         return '✕'
       case 'warning':
         return '⚠'
+      case 'info':
+      default:
+        return 'ℹ'
+    }
+  }
