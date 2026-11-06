@@ -44,3 +44,8 @@ export default function WeatherCard({
       return '⛈️'
     } else if (weatherLower.includes('snow')) {
       return '❄️'
+    } else if (weatherLower.includes('fog') || weatherLower.includes('mist')) {
+      return '🌫️'
+    }
+    return '🌤️'
+  }
