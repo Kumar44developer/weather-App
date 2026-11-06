@@ -47,3 +47,7 @@ export default function BackgroundVideo() {
     console.warn(`Video failed to load for weather type: ${weatherType}`)
     // Try fallback if current video fails
     const fallbackSrc = fallbackVideos[weatherType]
+    if (fallbackSrc && currentVideo !== fallbackSrc) {
+      setCurrentVideo(fallbackSrc)
+    }
+  }
