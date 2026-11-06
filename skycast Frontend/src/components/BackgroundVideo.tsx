@@ -70,3 +70,7 @@ export default function BackgroundVideo() {
         }`}
         onError={handleVideoError}
       >
+
+        <source src={currentVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
