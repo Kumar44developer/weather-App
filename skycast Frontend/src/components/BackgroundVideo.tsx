@@ -14,3 +14,6 @@ const fallbackVideos = {
   cloudy: 'https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4', // Cloudy
   storm: 'https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4', // Storm
 }
+
+export default function BackgroundVideo() {
+  const { weatherType } = useWeather()
