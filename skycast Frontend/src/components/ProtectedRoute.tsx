@@ -20,3 +20,8 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
       </div>
     )
   }
+
+
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />
+  }
