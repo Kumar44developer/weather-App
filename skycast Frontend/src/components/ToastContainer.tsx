@@ -7,3 +7,6 @@ export default function ToastContainer() {
     switch (type) {
       case 'success':
         return 'bg-green-500 text-white'
+      case 'error':
+        return 'bg-red-500 text-white'
+      case 'warning':
