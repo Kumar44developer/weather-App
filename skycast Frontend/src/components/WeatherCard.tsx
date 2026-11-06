@@ -38,3 +38,5 @@ export default function WeatherCard({
       return '☀️'
     } else if (weatherLower.includes('cloud')) {
       return '☁️'
+    } else if (weatherLower.includes('rain')) {
+      return '🌧️'
