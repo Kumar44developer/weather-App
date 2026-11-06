@@ -65,3 +65,8 @@ export default function BackgroundVideo() {
         loop
         muted
         playsInline
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+          fade ? 'opacity-0' : 'opacity-100'
+        }`}
+        onError={handleVideoError}
+      >
