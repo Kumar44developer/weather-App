@@ -22,3 +22,7 @@ export default function WeatherCard({
   isPrimary = false,
 }: WeatherCardProps) {
   const { setWeatherType, getWeatherTypeFromString } = useWeather()
+
+  useEffect(() => {
+    if (isPrimary) {
+      const weatherType = getWeatherTypeFromString(weather)
