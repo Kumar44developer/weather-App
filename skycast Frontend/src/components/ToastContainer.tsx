@@ -43,3 +43,6 @@ export default function ToastContainer() {
           )} backdrop-blur-sm px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl shadow-2xl flex items-start gap-2 sm:gap-3 animate-fade-in-up hover:scale-[1.02] transition-all duration-300`}
           style={{ animationDelay: `${index * 50}ms` }}
         >
+          <span className="font-bold text-base sm:text-lg flex-shrink-0">{getIcon(toast.type)}</span>
+          <p className="flex-1 text-xs sm:text-sm leading-relaxed">{toast.message}</p>
+          <button
