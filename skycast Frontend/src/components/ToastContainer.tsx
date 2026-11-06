@@ -46,3 +46,7 @@ export default function ToastContainer() {
           <span className="font-bold text-base sm:text-lg flex-shrink-0">{getIcon(toast.type)}</span>
           <p className="flex-1 text-xs sm:text-sm leading-relaxed">{toast.message}</p>
           <button
+            onClick={() => removeToast(toast.id)}
+            className="flex-shrink-0 text-white hover:text-gray-200 active:scale-90 font-bold text-lg sm:text-xl leading-none transition-transform duration-200"
+            aria-label="Close"
+          >
