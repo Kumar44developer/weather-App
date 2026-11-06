@@ -74,3 +74,8 @@ export default function BackgroundVideo() {
         <source src={currentVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      {/* Overlay for better content readability */}
+      <div className="absolute inset-0 bg-black/30"></div>
+    </div>
+  )
+}
