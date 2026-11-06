@@ -26,3 +26,9 @@ export default function WeatherCard({
   useEffect(() => {
     if (isPrimary) {
       const weatherType = getWeatherTypeFromString(weather)
+      setWeatherType(weatherType)
+    }
+  }, [weather, isPrimary, setWeatherType, getWeatherTypeFromString])
+  // Default icon based on weather condition if not provided
+  const getWeatherIcon = () => {
+    if (icon) return icon
