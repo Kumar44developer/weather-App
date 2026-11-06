@@ -40,3 +40,6 @@ export default function ToastContainer() {
           key={toast.id}
           className={`${getToastStyles(
             toast.type
+          )} backdrop-blur-sm px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl shadow-2xl flex items-start gap-2 sm:gap-3 animate-fade-in-up hover:scale-[1.02] transition-all duration-300`}
+          style={{ animationDelay: `${index * 50}ms` }}
+        >
