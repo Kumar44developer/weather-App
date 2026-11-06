@@ -17,3 +17,5 @@ const fallbackVideos = {
 
 export default function BackgroundVideo() {
   const { weatherType } = useWeather()
+  const [currentVideo, setCurrentVideo] = useState<string | null>(null)
+  const [fade, setFade] = useState(false)
