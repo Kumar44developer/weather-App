@@ -61,3 +61,7 @@ export default function BackgroundVideo() {
     <div className="fixed inset-0 z-0 overflow-hidden">
       <video
         key={currentVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
