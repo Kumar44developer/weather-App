@@ -16,3 +16,6 @@ export default function WeatherCard({
   city,
   temperature,
   weather,
+  icon,
+  humidity,
+  wind,
