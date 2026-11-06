@@ -42,3 +42,5 @@ export default function WeatherCard({
       return '🌧️'
     } else if (weatherLower.includes('storm') || weatherLower.includes('thunder')) {
       return '⛈️'
+    } else if (weatherLower.includes('snow')) {
+      return '❄️'
