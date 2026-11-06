@@ -36,3 +36,5 @@ export default function WeatherCard({
     const weatherLower = weather.toLowerCase()
     if (weatherLower.includes('sun') || weatherLower.includes('clear')) {
       return '☀️'
+    } else if (weatherLower.includes('cloud')) {
+      return '☁️'
