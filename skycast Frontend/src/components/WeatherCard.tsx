@@ -10,3 +10,9 @@ interface WeatherCardProps {
   wind: number
   isPrimary?: boolean // If true, this card's weather will control the background
 }
+
+
+export default function WeatherCard({
+  city,
+  temperature,
+  weather,
