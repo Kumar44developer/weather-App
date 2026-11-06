@@ -32,3 +32,7 @@ export default function WeatherCard({
   // Default icon based on weather condition if not provided
   const getWeatherIcon = () => {
     if (icon) return icon
+
+    const weatherLower = weather.toLowerCase()
+    if (weatherLower.includes('sun') || weatherLower.includes('clear')) {
+      return '☀️'
