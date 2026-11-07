@@ -19,3 +19,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const checkAuth = async () => {
       const token = authService.getToken()
+      if (token) {
+        try {
+          const userData = await authService.getCurrentUser()
+          setUser(userData)
