@@ -40,3 +40,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const userData = await authService.getCurrentUser()
     setUser(userData)
+
+    // Navigation handled by component using this function
+    window.location.href = '/dashboard'
+  }
