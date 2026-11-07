@@ -23,3 +23,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         try {
           const userData = await authService.getCurrentUser()
           setUser(userData)
+        } catch (error) {
+          // Token invalid, clear it
+          authService.logout()
+        }
+      }
+      setLoading(false)
+    }
