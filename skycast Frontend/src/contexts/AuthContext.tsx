@@ -9,3 +9,5 @@ interface AuthContextType {
   logout: () => void
   isAuthenticated: boolean
 }
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined)
