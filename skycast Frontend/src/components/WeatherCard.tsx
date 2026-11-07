@@ -67,3 +67,7 @@ export default function WeatherCard({
           <span className="text-xl sm:text-2xl text-gray-500 ml-2">°C</span>
         </div>
       </div>
+
+      <div className="border-t border-gray-200/50 pt-3 sm:pt-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          <div className="flex items-center group">
