@@ -8,3 +8,7 @@ export interface Toast {
   type: ToastType
   duration?: number
 }
+
+interface ToastContextType {
+  toasts: Toast[]
+  showToast: (message: string, type?: ToastType, duration?: number) => void
