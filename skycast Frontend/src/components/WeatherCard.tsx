@@ -83,3 +83,9 @@ export default function WeatherCard({
               <p className="text-xs sm:text-sm text-gray-500">Wind</p>
               <p className="text-base sm:text-lg font-semibold text-gray-900">{wind} km/h</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
