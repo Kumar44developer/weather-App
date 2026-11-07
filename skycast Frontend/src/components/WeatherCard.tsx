@@ -63,3 +63,7 @@ export default function WeatherCard({
 
       <div className="mb-4 sm:mb-6">
         <div className="flex items-baseline">
+          <span className="text-4xl sm:text-5xl font-bold text-gray-900 transition-all duration-300">{temperature}</span>
+          <span className="text-xl sm:text-2xl text-gray-500 ml-2">°C</span>
+        </div>
+      </div>
