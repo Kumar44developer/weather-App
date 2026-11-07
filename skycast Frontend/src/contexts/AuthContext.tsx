@@ -44,3 +44,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Navigation handled by component using this function
     window.location.href = '/dashboard'
   }
+
+  const register = async (name: string, email: string, password: string) => {
+    await authService.register({ name, email, password })
+    
