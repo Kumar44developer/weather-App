@@ -4,3 +4,8 @@ import { authService, UserResponse } from '../services/auth'
 interface AuthContextType {
   user: UserResponse | null
   loading: boolean
+  login: (email: string, password: string) => Promise<void>
+  register: (name: string, email: string, password: string) => Promise<void>
+  logout: () => void
+  isAuthenticated: boolean
+}
