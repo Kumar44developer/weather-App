@@ -69,3 +69,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         isAuthenticated: !!user,
       }}
     >
+
+      {children}
+    </AuthContext.Provider>
+  )
+}
