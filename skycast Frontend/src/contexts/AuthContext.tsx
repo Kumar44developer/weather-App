@@ -57,3 +57,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(null)
     window.location.href = '/login'
   }
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        loading,
+        login,
