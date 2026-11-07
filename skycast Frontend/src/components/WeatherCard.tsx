@@ -71,3 +71,5 @@ export default function WeatherCard({
       <div className="border-t border-gray-200/50 pt-3 sm:pt-4">
         <div className="grid grid-cols-2 gap-3 sm:gap-4">
           <div className="flex items-center group">
+            <span className="text-xl sm:text-2xl mr-2 group-hover:scale-110 transition-transform duration-200">💧</span>
+            <div>
