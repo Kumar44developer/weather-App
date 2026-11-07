@@ -73,3 +73,7 @@ export default function WeatherCard({
           <div className="flex items-center group">
             <span className="text-xl sm:text-2xl mr-2 group-hover:scale-110 transition-transform duration-200">💧</span>
             <div>
+              <p className="text-xs sm:text-sm text-gray-500">Humidity</p>
+              <p className="text-base sm:text-lg font-semibold text-gray-900">{humidity}%</p>
+            </div>
+          </div>
