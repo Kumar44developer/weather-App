@@ -59,3 +59,7 @@ export default function WeatherCard({
         </div>
         <div className="text-3xl sm:text-5xl ml-2 animate-bounce-subtle">{getWeatherIcon()}</div>
       </div>
+
+
+      <div className="mb-4 sm:mb-6">
+        <div className="flex items-baseline">
