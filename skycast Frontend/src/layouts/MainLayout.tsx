@@ -25,3 +25,7 @@ export default function MainLayout() {
                     to="/dashboard" 
                     className="text-xl sm:text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors duration-200"
                   >
+                    SkyCast
+                  </Link>
+                </div>
+                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
