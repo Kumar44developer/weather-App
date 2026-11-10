@@ -6,3 +6,8 @@ import { useToast } from '../contexts/ToastContext'
 export default function MainLayout() {
   const { logout, user } = useAuth()
   const { info: showInfo } = useToast()
+
+  const handleLogout = () => {
+    showInfo('Logging out...')
+    logout()
+  }
