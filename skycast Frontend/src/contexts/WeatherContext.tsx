@@ -8,3 +8,8 @@ interface WeatherContextType {
   setWeatherType: (type: WeatherType) => void
   getWeatherTypeFromString: (weather: string) => WeatherType
 }
+
+const WeatherContext = createContext<WeatherContextType | undefined>(undefined)
+
+export function WeatherProvider({ children }: { children: ReactNode }) {
+  const [weatherType, setWeatherType] = useState<WeatherType>(null)
