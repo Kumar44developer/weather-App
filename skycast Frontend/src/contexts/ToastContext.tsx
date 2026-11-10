@@ -55,3 +55,8 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     (message: string, duration?: number) => showToast(message, 'error', duration),
     [showToast]
   )
+
+  const info = useCallback(
+    (message: string, duration?: number) => showToast(message, 'info', duration),
+    [showToast]
+  )
