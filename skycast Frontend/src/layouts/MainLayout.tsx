@@ -16,3 +16,8 @@ export default function MainLayout() {
     <div className="min-h-screen relative overflow-x-hidden">
       <BackgroundVideo />
       <div className="relative z-10">
+        <nav className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-20 animate-slide-down">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+            <div className="flex justify-between items-center h-14 sm:h-16">
+              <div className="flex items-center">
+                <div className="flex-shrink-0 flex items-center">
