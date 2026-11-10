@@ -37,3 +37,12 @@ export function WeatherProvider({ children }: { children: ReactNode }) {
     </WeatherContext.Provider>
   )
 }
+
+export function useWeather() {
+  const context = useContext(WeatherContext)
+  if (context === undefined) {
+    throw new Error('useWeather must be used within a WeatherProvider')
+  }
+  return context
+}
+
