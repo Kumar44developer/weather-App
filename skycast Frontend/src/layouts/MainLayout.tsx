@@ -29,3 +29,7 @@ export default function MainLayout() {
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                  <Link
+                    to="/dashboard"
+                    className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium hover:text-indigo-600 transition-colors duration-200"
+                  >
