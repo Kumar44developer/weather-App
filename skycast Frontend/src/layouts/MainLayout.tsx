@@ -11,3 +11,8 @@ export default function MainLayout() {
     showInfo('Logging out...')
     logout()
   }
+
+  return (
+    <div className="min-h-screen relative overflow-x-hidden">
+      <BackgroundVideo />
+      <div className="relative z-10">
