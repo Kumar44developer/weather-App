@@ -26,3 +26,6 @@ export function WeatherProvider({ children }: { children: ReactNode }) {
     } else if (weatherLower.includes('sun') || weatherLower.includes('clear')) {
       return 'sunny'
     }
+
+    return 'sunny'
+  }
