@@ -21,3 +21,7 @@ export default function MainLayout() {
             <div className="flex justify-between items-center h-14 sm:h-16">
               <div className="flex items-center">
                 <div className="flex-shrink-0 flex items-center">
+                  <Link 
+                    to="/dashboard" 
+                    className="text-xl sm:text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors duration-200"
+                  >
