@@ -50,3 +50,8 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     (message: string, duration?: number) => showToast(message, 'success', duration),
     [showToast]
   )
+
+  const error = useCallback(
+    (message: string, duration?: number) => showToast(message, 'error', duration),
+    [showToast]
+  )
