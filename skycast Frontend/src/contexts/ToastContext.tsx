@@ -65,3 +65,16 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     (message: string, duration?: number) => showToast(message, 'warning', duration),
     [showToast]
   )
+
+  return (
+    <ToastContext.Provider
+      value={{
+        toasts,
+        showToast,
+        removeToast,
+        success,
+        error,
+        info,
+        warning,
+      }}
+    >
