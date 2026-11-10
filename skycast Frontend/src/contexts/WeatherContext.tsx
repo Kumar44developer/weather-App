@@ -16,3 +16,13 @@ export function WeatherProvider({ children }: { children: ReactNode }) {
 
   const getWeatherTypeFromString = (weather: string): WeatherType => {
     const weatherLower = weather.toLowerCase()
+
+    if (weatherLower.includes('storm') || weatherLower.includes('thunder')) {
+      return 'storm'
+    } else if (weatherLower.includes('rain') || weatherLower.includes('drizzle')) {
+      return 'rain'
+    } else if (weatherLower.includes('cloud') || weatherLower.includes('overcast')) {
+      return 'cloudy'
+    } else if (weatherLower.includes('sun') || weatherLower.includes('clear')) {
+      return 'sunny'
+    }
