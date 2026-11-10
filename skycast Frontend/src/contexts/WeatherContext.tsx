@@ -29,3 +29,11 @@ export function WeatherProvider({ children }: { children: ReactNode }) {
 
     return 'sunny'
   }
+
+
+  return (
+    <WeatherContext.Provider value={{ weatherType, setWeatherType, getWeatherTypeFromString }}>
+      {children}
+    </WeatherContext.Provider>
+  )
+}
