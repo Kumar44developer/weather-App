@@ -78,3 +78,8 @@ export function ToastProvider({ children }: { children: ReactNode }) {
         warning,
       }}
     >
+
+      {children}
+    </ToastContext.Provider>
+  )
+}
