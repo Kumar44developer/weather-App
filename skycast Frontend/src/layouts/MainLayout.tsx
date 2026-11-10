@@ -38,3 +38,9 @@ export default function MainLayout() {
                   </Link>
                 </div>
               </div>
+              <div className="flex items-center gap-2 sm:gap-4">
+                {user && (
+                  <span className="text-xs sm:text-sm text-gray-700 hidden sm:inline-block truncate max-w-[100px] sm:max-w-none">
+                    {user.name}
+                  </span>
+                )}
