@@ -44,3 +44,9 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     },
     [removeToast]
   )
+
+
+  const success = useCallback(
+    (message: string, duration?: number) => showToast(message, 'success', duration),
+    [showToast]
+  )
