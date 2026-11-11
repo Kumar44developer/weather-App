@@ -44,3 +44,7 @@ export default function MainLayout() {
                     {user.name}
                   </span>
                 )}
+                <button
+                  onClick={handleLogout}
+                  className="bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-200 shadow-md hover:shadow-lg"
+                >
