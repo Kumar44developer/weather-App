@@ -48,3 +48,6 @@ export default function Dashboard() {
         showSuccess(`Loaded weather for ${successCount} city${successCount > 1 ? 'ies' : ''}`)
       }
     }
+
+    fetchWeatherData()
+  }, [cities, showSuccess, showError, showInfo])
