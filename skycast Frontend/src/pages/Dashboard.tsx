@@ -21,3 +21,8 @@ export default function Dashboard() {
     cities.map((city) => ({ city, data: null, loading: true, error: null }))
   )
   const { success: showSuccess, error: showError, info: showInfo } = useToast()
+
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+      showInfo('Loading weather data...')
+      const promises = cities.map(async (city) => {
