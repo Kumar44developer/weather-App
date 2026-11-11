@@ -26,3 +26,7 @@ export default function Dashboard() {
     const fetchWeatherData = async () => {
       showInfo('Loading weather data...')
       const promises = cities.map(async (city) => {
+        try {
+          const data = await weatherService.getWeather(city)
+          return { city, data, loading: false, error: null }
+        } catch (error: any) {
