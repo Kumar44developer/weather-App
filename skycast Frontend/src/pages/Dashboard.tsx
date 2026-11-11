@@ -68,3 +68,10 @@ export default function Dashboard() {
       setAiResponse(response.advice)
       setQuestion('') // Clear input after successful submit
       showSuccess('AI response received!')
+    } catch (error: any) {
+      const errorMessage = error.response?.data?.detail || 'Failed to get AI response. Please try again.'
+      showError(errorMessage)
+    } finally {
+      setAiLoading(false)
+    }
+  }
