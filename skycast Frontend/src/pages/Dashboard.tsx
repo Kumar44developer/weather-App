@@ -9,3 +9,10 @@ interface CityWeather {
   loading: boolean
   error: string | null
 }
+
+
+export default function Dashboard() {
+  const [question, setQuestion] = useState('')
+  const [selectedCity, setSelectedCity] = useState('New York')
+  const [aiResponse, setAiResponse] = useState<string | null>(null)
+  const [aiLoading, setAiLoading] = useState(false)
