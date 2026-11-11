@@ -16,3 +16,8 @@ export default function Dashboard() {
   const [selectedCity, setSelectedCity] = useState('New York')
   const [aiResponse, setAiResponse] = useState<string | null>(null)
   const [aiLoading, setAiLoading] = useState(false)
+  const [cities] = useState(['New York', 'London', 'Tokyo'])
+  const [weatherData, setWeatherData] = useState<CityWeather[]>(
+    cities.map((city) => ({ city, data: null, loading: true, error: null }))
+  )
+  const { success: showSuccess, error: showError, info: showInfo } = useToast()
