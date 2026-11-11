@@ -51,3 +51,7 @@ export default function Dashboard() {
 
     fetchWeatherData()
   }, [cities, showSuccess, showError, showInfo])
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    if (!question.trim()) return
