@@ -59,3 +59,9 @@ export default function Dashboard() {
 
     setAiLoading(true)
     setAiResponse(null)
+
+    try {
+      const response = await weatherService.askAI({
+        city: selectedCity,
+        question: question.trim(),
+      })
