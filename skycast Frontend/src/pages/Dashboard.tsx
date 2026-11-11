@@ -55,3 +55,7 @@ export default function Dashboard() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     if (!question.trim()) return
+
+
+    setAiLoading(true)
+    setAiResponse(null)
