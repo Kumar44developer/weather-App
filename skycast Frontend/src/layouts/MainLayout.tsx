@@ -55,3 +55,10 @@ export default function MainLayout() {
             </div>
           </div>
         </nav>
+        <main className="max-w-7xl mx-auto relative z-10 px-3 sm:px-4 lg:px-6">
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  )
+}
