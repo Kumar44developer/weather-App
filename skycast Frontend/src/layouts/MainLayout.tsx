@@ -51,3 +51,7 @@ export default function MainLayout() {
                   <span className="hidden sm:inline">Logout</span>
                   <span className="sm:hidden">Out</span>
                 </button>
+              </div>
+            </div>
+          </div>
+        </nav>
