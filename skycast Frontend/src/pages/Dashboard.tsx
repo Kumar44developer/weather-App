@@ -65,3 +65,6 @@ export default function Dashboard() {
         city: selectedCity,
         question: question.trim(),
       })
+      setAiResponse(response.advice)
+      setQuestion('') // Clear input after successful submit
+      showSuccess('AI response received!')
