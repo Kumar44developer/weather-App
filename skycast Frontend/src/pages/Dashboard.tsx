@@ -44,3 +44,7 @@ export default function Dashboard() {
       const results = await Promise.all(promises)
       setWeatherData(results)
       const successCount = results.filter((r) => r.data).length
+      if (successCount > 0) {
+        showSuccess(`Loaded weather for ${successCount} city${successCount > 1 ? 'ies' : ''}`)
+      }
+    }
