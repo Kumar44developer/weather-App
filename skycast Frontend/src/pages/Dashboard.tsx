@@ -30,3 +30,13 @@ export default function Dashboard() {
           const data = await weatherService.getWeather(city)
           return { city, data, loading: false, error: null }
         } catch (error: any) {
+          const errorMessage = error.response?.data?.detail || 'Failed to fetch weather'
+          showError(`Failed to load weather for ${city}: ${errorMessage}`)
+          return {
+            city,
+            data: null,
+            loading: false,
+            error: errorMessage,
+          }
+        }
+      })
