@@ -130,3 +130,9 @@ export default function Dashboard() {
       {/* Ask Weather AI chat input */}
       <div className="max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '300ms' }}>
         <h2 className="text-lg sm:text-xl font-semibold text-white mb-3 drop-shadow">
+          Ask Weather AI
+        </h2>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-3 bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-4 sm:p-6 hover:bg-white/90 transition-all duration-300"
+        >
