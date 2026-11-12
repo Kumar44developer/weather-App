@@ -75,3 +75,9 @@ export default function Dashboard() {
       setAiLoading(false)
     }
   }
+
+  return (
+    <div className="py-4 sm:py-6 space-y-6 sm:space-y-8 animate-fade-in">
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 drop-shadow-lg animate-slide-in-left">
+        Dashboard
+      </h1>
