@@ -182,3 +182,10 @@ export default function Dashboard() {
               </div>
             </div>
           )}
+
+          {aiResponse && !aiLoading && (
+            <div className="mt-3 p-4 bg-green-50/90 backdrop-blur-sm border border-green-200 rounded-lg animate-fade-in-up">
+              <h3 className="text-sm font-semibold text-green-900 mb-2">AI Advice:</h3>
+              <p className="text-green-800 text-sm whitespace-pre-wrap leading-relaxed">{aiResponse}</p>
+            </div>
+          )}
