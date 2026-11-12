@@ -147,3 +147,12 @@ export default function Dashboard() {
                   {city}
                 </option>
               ))}
+            </select>
+            <input
+              type="text"
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
+              placeholder="Ask about today's weather, forecast, or what to wear..."
+              className="flex-1 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 text-sm bg-white/90 backdrop-blur-sm transition-all duration-200 disabled:opacity-50"
+              disabled={aiLoading}
+            />
