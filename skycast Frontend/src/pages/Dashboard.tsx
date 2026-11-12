@@ -86,3 +86,7 @@ export default function Dashboard() {
         {weatherData.map((cityWeather, index) => {
           if (cityWeather.loading) {
             return (
+              <div
+                key={cityWeather.city}
+                className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center min-h-[200px] gap-3 animate-pulse"
+              >
