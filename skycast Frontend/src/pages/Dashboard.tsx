@@ -172,3 +172,13 @@ export default function Dashboard() {
               )}
             </button>
           </div>
+
+          {/* AI Response Display */}
+          {aiLoading && (
+            <div className="mt-3 p-4 bg-blue-50/90 backdrop-blur-sm border border-blue-200 rounded-lg animate-fade-in">
+              <div className="flex items-center gap-2">
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-indigo-600"></div>
+                <span className="text-blue-700 text-sm">Getting AI advice...</span>
+              </div>
+            </div>
+          )}
