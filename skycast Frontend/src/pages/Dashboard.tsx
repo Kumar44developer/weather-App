@@ -90,3 +90,8 @@ export default function Dashboard() {
                 key={cityWeather.city}
                 className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center min-h-[200px] gap-3 animate-pulse"
               >
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+                <div className="text-gray-500 text-sm">Loading weather...</div>
+              </div>
+            )
+          }
