@@ -126,3 +126,7 @@ export default function Dashboard() {
           )
         })}
       </div>
+
+      {/* Ask Weather AI chat input */}
+      <div className="max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+        <h2 className="text-lg sm:text-xl font-semibold text-white mb-3 drop-shadow">
