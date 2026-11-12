@@ -189,3 +189,8 @@ export default function Dashboard() {
               <p className="text-green-800 text-sm whitespace-pre-wrap leading-relaxed">{aiResponse}</p>
             </div>
           )}
+        </form>
+      </div>
+    </div>
+  )
+}
