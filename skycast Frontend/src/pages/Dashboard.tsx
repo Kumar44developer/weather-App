@@ -102,3 +102,8 @@ export default function Dashboard() {
                 key={cityWeather.city}
                 className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-4 sm:p-6 animate-shake"
               >
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{cityWeather.city}</h2>
+                <p className="text-red-600 text-sm">{cityWeather.error || 'No data available'}</p>
+              </div>
+            )
+          }
