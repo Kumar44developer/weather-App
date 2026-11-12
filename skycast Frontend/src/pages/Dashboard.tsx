@@ -95,3 +95,10 @@ export default function Dashboard() {
               </div>
             )
           }
+
+          if (cityWeather.error || !cityWeather.data) {
+            return (
+              <div
+                key={cityWeather.city}
+                className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl p-4 sm:p-6 animate-shake"
+              >
