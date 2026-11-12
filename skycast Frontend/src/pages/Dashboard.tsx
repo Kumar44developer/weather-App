@@ -114,3 +114,15 @@ export default function Dashboard() {
               className="animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
+              <WeatherCard
+                city={cityWeather.data.city}
+                temperature={Math.round(cityWeather.data.temperature)}
+                weather={cityWeather.data.description}
+                humidity={cityWeather.data.humidity}
+                wind={Math.round(cityWeather.data.wind)}
+                isPrimary={index === 0}
+              />
+            </div>
+          )
+        })}
+      </div>
