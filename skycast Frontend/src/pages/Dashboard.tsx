@@ -107,3 +107,10 @@ export default function Dashboard() {
               </div>
             )
           }
+
+          return (
+            <div
+              key={cityWeather.city}
+              className="animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
