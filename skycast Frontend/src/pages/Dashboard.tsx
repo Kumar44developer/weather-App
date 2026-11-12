@@ -156,3 +156,8 @@ export default function Dashboard() {
               className="flex-1 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 text-sm bg-white/90 backdrop-blur-sm transition-all duration-200 disabled:opacity-50"
               disabled={aiLoading}
             />
+            <button
+              type="submit"
+              disabled={aiLoading || !question.trim()}
+              className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-md hover:shadow-lg"
+            >
