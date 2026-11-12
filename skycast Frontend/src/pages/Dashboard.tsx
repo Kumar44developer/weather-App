@@ -142,3 +142,8 @@ export default function Dashboard() {
               onChange={(e) => setSelectedCity(e.target.value)}
               className="px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 text-sm bg-white/90 backdrop-blur-sm transition-all duration-200 hover:bg-white"
             >
+              {cities.map((city) => (
+                <option key={city} value={city}>
+                  {city}
+                </option>
+              ))}
