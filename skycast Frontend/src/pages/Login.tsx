@@ -84,3 +84,8 @@ export default function Login() {
               />
             </div>
           </div>
+
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+            <div className="flex items-center">
+              <input
