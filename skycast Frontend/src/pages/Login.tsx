@@ -33,3 +33,10 @@ export default function Login() {
     try {
       await login(email, password)
       showSuccess('Login successful! Welcome back.')
+    } catch (err: any) {
+      const errorMessage = err.response?.data?.detail || 'Login failed. Please try again.'
+      showError(errorMessage)
+    } finally {
+      setLoading(false)
+    }
+  }
