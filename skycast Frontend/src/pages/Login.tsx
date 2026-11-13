@@ -29,3 +29,7 @@ export default function Login() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
+
+    try {
+      await login(email, password)
+      showSuccess('Login successful! Welcome back.')
