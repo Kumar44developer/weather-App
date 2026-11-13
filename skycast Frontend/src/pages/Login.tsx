@@ -25,3 +25,7 @@ export default function Login() {
   if (isAuthenticated) {
     return <Navigate to="/dashboard" replace />
   }
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setLoading(true)
