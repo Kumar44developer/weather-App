@@ -20,3 +20,8 @@ export default function Login() {
       </div>
     )
   }
+
+
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard" replace />
+  }
