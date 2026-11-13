@@ -68,3 +68,6 @@ export default function Login() {
               />
             </div>
             <div>
+              <label htmlFor="password" className="sr-only">
+                Password
+              </label>
