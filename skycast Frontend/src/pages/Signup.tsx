@@ -10,3 +10,8 @@ export default function Signup() {
   const [loading, setLoading] = useState(false)
   const { register, isAuthenticated, loading: authLoading } = useAuth()
   const { error: showError, success: showSuccess } = useToast()
+
+  if (authLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="flex flex-col items-center gap-3">
