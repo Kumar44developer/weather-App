@@ -35,3 +35,6 @@ export default function Signup() {
     try {
       await register(name, email, password)
       showSuccess('Account created successfully! Welcome to SkyCast.')
+    } catch (err: any) {
+      const errorMessage = err.response?.data?.detail || 'Registration failed. Please try again.'
+      showError(errorMessage)
