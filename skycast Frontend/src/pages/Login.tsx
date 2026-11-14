@@ -98,3 +98,10 @@ export default function Login() {
                 Remember me
               </label>
             </div>
+
+            <div className="text-xs sm:text-sm">
+              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500 transition-colors duration-200">
+                Forgot your password?
+              </a>
+            </div>
+          </div>
