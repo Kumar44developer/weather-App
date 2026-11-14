@@ -38,3 +38,7 @@ export default function Signup() {
     } catch (err: any) {
       const errorMessage = err.response?.data?.detail || 'Registration failed. Please try again.'
       showError(errorMessage)
+    } finally {
+      setLoading(false)
+    }
+  }
