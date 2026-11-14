@@ -51,3 +51,10 @@ export default function Signup() {
             Create your SkyCast account
           </h2>
         </div>
+        <form className="mt-6 sm:mt-8 space-y-5 sm:space-y-6" onSubmit={handleSubmit}>
+          <div className="rounded-lg shadow-sm -space-y-px">
+            <div>
+              <label htmlFor="name" className="sr-only">
+                Full name
+              </label>
+              <input
