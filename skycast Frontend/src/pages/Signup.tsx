@@ -30,3 +30,8 @@ export default function Signup() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
+
+
+    try {
+      await register(name, email, password)
+      showSuccess('Account created successfully! Welcome to SkyCast.')
