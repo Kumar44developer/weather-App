@@ -7,3 +7,6 @@ export default function Signup() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [loading, setLoading] = useState(false)
+  const { register, isAuthenticated, loading: authLoading } = useAuth()
+  const { error: showError, success: showSuccess } = useToast()
