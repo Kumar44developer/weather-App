@@ -47,3 +47,7 @@ export default function Signup() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 px-4 py-8">
       <div className="max-w-md w-full space-y-6 sm:space-y-8 p-6 sm:p-8 bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl animate-fade-in-up">
         <div className="animate-slide-in-left">
+          <h2 className="mt-2 sm:mt-6 text-center text-2xl sm:text-3xl font-extrabold text-gray-900">
+            Create your SkyCast account
+          </h2>
+        </div>
