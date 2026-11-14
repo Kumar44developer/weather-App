@@ -21,3 +21,8 @@ export default function Signup() {
       </div>
     )
   }
+
+
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard" replace />
+  }
