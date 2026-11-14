@@ -123,3 +123,7 @@ export default function Login() {
               )}
             </button>
           </div>
+
+          <div className="text-center">
+            <span className="text-sm text-gray-600">
+              Don't have an account?{' '}
