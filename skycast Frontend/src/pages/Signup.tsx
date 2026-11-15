@@ -128,3 +128,10 @@ export default function Signup() {
               <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
                 Sign in
               </Link>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
