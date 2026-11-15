@@ -70,3 +70,7 @@ export default function Signup() {
               />
             </div>
             <div>
+              <label htmlFor="email" className="sr-only">
+                Email address
+              </label>
+              <input
