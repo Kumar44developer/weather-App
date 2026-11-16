@@ -37,3 +37,7 @@ export const authService = {
     const response = await api.get<UserResponse>('/auth/me')
     return response.data
   },
+
+  logout(): void {
+    localStorage.removeItem('token')
+  },
