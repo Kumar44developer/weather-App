@@ -27,3 +27,8 @@ export const authService = {
     const response = await api.post<AuthResponse>('/auth/login', credentials)
     return response.data
   },
+
+  async register(data: RegisterData): Promise<UserResponse> {
+    const response = await api.post<UserResponse>('/auth/register', data)
+    return response.data
+  },
