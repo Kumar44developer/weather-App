@@ -25,3 +25,9 @@ export const weatherService = {
     })
     return response.data
   },
+
+  async askAI(request: AIWeatherRequest): Promise<AIWeatherResponse> {
+    const response = await api.post<AIWeatherResponse>('/ai-weather', request)
+    return response.data
+  },
+}
