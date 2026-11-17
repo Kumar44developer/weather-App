@@ -17,3 +17,11 @@ export interface AIWeatherRequest {
 export interface AIWeatherResponse {
   advice: string
 }
+
+export const weatherService = {
+  async getWeather(city: string): Promise<WeatherData> {
+    const response = await api.get<WeatherData>('/weather', {
+      params: { city },
+    })
+    return response.data
+  },
