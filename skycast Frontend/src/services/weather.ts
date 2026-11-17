@@ -13,3 +13,7 @@ export interface AIWeatherRequest {
   city: string
   question: string
 }
+
+export interface AIWeatherResponse {
+  advice: string
+}
