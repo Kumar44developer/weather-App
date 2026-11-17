@@ -7,3 +7,9 @@ export interface WeatherData {
   wind: number
   description: string
 }
+
+
+export interface AIWeatherRequest {
+  city: string
+  question: string
+}
