@@ -38,3 +38,5 @@ function App() {
     </ToastProvider>
   )
 }
+
+export default App
