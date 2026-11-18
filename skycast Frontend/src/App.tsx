@@ -8,3 +8,12 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Dashboard from './pages/Dashboard'
 import MainLayout from './layouts/MainLayout'
+
+function App() {
+  return (
+    <ToastProvider>
+      <AuthProvider>
+        <WeatherProvider>
+          <BrowserRouter>
+            <ToastContainer />
+            <Routes>
