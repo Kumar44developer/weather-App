@@ -84,3 +84,6 @@ body {
 .animate-slide-in-left {
   animation: slide-in-left 0.6s ease-out;
 }
+.animate-slide-down {
+  animation: slide-down 0.4s ease-out;
+}
