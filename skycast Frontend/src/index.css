@@ -108,3 +108,8 @@ html {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.5);
+  border-radius: 4px;
+}
