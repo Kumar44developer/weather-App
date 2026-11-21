@@ -12,3 +12,8 @@ node_modules
 dist
 dist-ssr
 *.local
+
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
